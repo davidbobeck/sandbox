@@ -7,4 +7,4 @@ Sandbox
 What's it for?
 --------------
 
-* Just a play to play with rails
+* Just a place to play with rails
