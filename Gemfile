@@ -38,10 +38,10 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem "mongo_mapper", "~> 0.13.0.beta2"
+gem "mongo_mapper"
 gem 'bson_ext'
-
 gem 'slim-rails', '~> 2.1.4'
+gem 'guid'  # http://rubydoc.info/gems/guid/0.1.1/frames
 
 #gem 'bootstrap-sass', '~> 3.2.0'
  

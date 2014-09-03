@@ -1,0 +1,34 @@
+defaults: &defaults
+  # host: 127.0.0.1
+  # port: 27017
+  options:
+    w: 1
+    pool_size: 1
+    slave_ok: false
+    ssl: false
+
+development:
+  <<: *defaults
+  host: localhost
+  database: sandbox
+
+  # NOTE: this URI sytax does not work without username and password
+  #uri: <%= URI('mongodb://:@localhost:27017/sandbox') %>
+
+test:
+  <<: *defaults
+  uri: <%= URI(ENV['SANDBOX_TEST_MONGOLAB_URL']) %>
+  w: 0
+
+  # NOTE: the database name is defined in the URI
+  #database: sandbox_test
+
+# set these environment variables on your prod server
+production:
+  <<: *defaults
+  uri: <%= URI(ENV['SANDBOX_MONGOLAB_URL']) %>
+
+  # NOTE: the database name is defined in the URI
+  #database: sandbox
+  #username: <%= ENV['MONGO_USERNAME'] %>
+  #password: <%= ENV['MONGO_PASSWORD'] %>

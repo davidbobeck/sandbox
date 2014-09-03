@@ -1,6 +1,25 @@
 
 div style="text-align:center"
   h3 Welcome to my sandbox
-  button.btn.btn-primary Enter
+  /button.btn.btn-primary Enter
 
-  
+  ol style="text-align:left"
+    - @toys.each do |toy|
+      li
+        label 
+          | Color
+        span style="margin-left:10px" 
+          = "#{toy.color}"
+        br
+
+        label 
+          | Has wheels
+        span style="margin-left:10px" 
+          = "#{toy.has_wheels}"
+        br
+        
+        label 
+          | Weight
+        span style="margin-left:10px" 
+          = "#{toy.weight} lbs"
+        br
