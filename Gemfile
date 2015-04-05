@@ -38,8 +38,14 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+#########################################################
+
+
+gem 'rails_12factor', group: :production # this gem required by heroku
+gem 'pry'
 gem "mongo_mapper"
 gem 'bson_ext'
+#gem 'aws-sdk', '~> 1.50.0'
 gem 'slim-rails', '~> 2.1.4'
 gem 'guid'  # http://rubydoc.info/gems/guid/0.1.1/frames
 gem 'redis-rails'

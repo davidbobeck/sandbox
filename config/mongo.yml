@@ -16,7 +16,7 @@ development:
 
 test:
   <<: *defaults
-  uri: <%= URI.parse(ENV['SANDBOX_TEST_MONGOLAB_URL']) %>
+  uri: <%= URI.parse(ENV['SANDBOX_TEST_MONGOLAB_URL'] || 'mongodb://localhost:27017') %>
   w: 0
   # NOTE: the database name is defined in the URI
   #database: sandbox_test
@@ -24,7 +24,7 @@ test:
 # set these environment variables on your prod server
 production:
   <<: *defaults
-  uri: <%= URI.parse(ENV['SANDBOX_MONGOLAB_URL']) %>
+  uri: <%= URI.parse(ENV['SANDBOX_MONGOLAB_URL'] || 'mongodb://localhost:27017') %>
   # NOTE: the database name is defined in the URI
   #database: sandbox
   #username: <%= ENV['MONGO_USERNAME'] %>
