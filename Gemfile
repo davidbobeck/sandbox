@@ -55,6 +55,4 @@ gem 'guid'  # http://rubydoc.info/gems/guid/0.1.1/frames
 gem 'redis-rails'
 
 #gem 'bootstrap-sass', '~> 3.2.0'
- 
-ruby "2.2.0"
 
